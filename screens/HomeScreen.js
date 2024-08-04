@@ -1,14 +1,14 @@
 import { View, Text, Image, StatusBar, TextInput, ScrollView, TouchableOpacity } from 'react-native'
 import React, { useState } from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
-import { AdjustmentsHorizontalIcon, ArrowLeftOnRectangleIcon , MagnifyingGlassIcon } from 'react-native-heroicons/solid'
+import { AdjustmentsHorizontalIcon, ArrowLeftOnRectangleIcon, MagnifyingGlassIcon } from 'react-native-heroicons/solid'
 import { categories ,fooditems } from '../constant/data'
 import * as Animatable from 'react-native-animatable';
 import FoodCard from '../component/FoodCard'
 import { useNavigation } from '@react-navigation/native'
 
 export default function HomeScreen() {
-  const navigation =useNavigation()
+  const navigation = useNavigation()
   const [activecategory ,setactivecategory] = useState("Burger")
   return (
     <View className="flex-1 relative" style={{backgroundColor : "#7B71F9"}}>
@@ -18,10 +18,9 @@ export default function HomeScreen() {
         <View className="rounded-2xl" style={{backgroundColor : "rgba(255,255,255,0.7)" , padding :3}}>
             <Image source={require("../Assets/Image/pic-1.jpg")} className="h-12 w-12 rounded-2xl" />
           </View>
-          <View className="bg-white shadow-md rounded-2xl p-3 ">
-            <ArrowLeftOnRectangleIcon  size={25} stroke={100} color={"black"} onPress={() => navigation.navigate('Welcome')} />
-          </View>
-
+          <TouchableOpacity className="bg-white shadow-md rounded-2xl p-3 ">
+            <ArrowLeftOnRectangleIcon size={25} stroke={100} color={"black"} onPress={() => navigation.navigate('Welcome')} />
+          </TouchableOpacity>
         </View>
         
         <View className="my-12 space-y-2 ">

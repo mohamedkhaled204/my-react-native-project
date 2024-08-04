@@ -1,6 +1,6 @@
 import { View, Text, Image, SafeAreaView, TouchableOpacity } from 'react-native'
 import React from 'react'
-import { ChevronLeftIcon, ArrowLeftOnRectangleIcon , MinusIcon, PlusIcon } from 'react-native-heroicons/solid'
+import { ChevronLeftIcon, ArrowLeftOnRectangleIcon, MinusIcon, PlusIcon } from 'react-native-heroicons/solid'
 import { useNavigation } from '@react-navigation/native';
 import * as Animatable from 'react-native-animatable';
 
@@ -20,9 +20,9 @@ export default function FoodDetailsScreen(props) {
                     <ChevronLeftIcon size={23} color={"black"} />
                     
                 </TouchableOpacity>
-            <View className="bg-white shadow-md rounded-2xl p-3 ">
-            <ArrowLeftOnRectangleIcon  size={25} stroke={100} color={"black"} onPress={() => navigation.navigate('Welcome')} />
-          </View>
+                <TouchableOpacity className="bg-white shadow-md rounded-2xl p-3 ">
+                    <ArrowLeftOnRectangleIcon size={25} stroke={100} color={"black"} onPress={() => navigation.navigate('Welcome')} />
+                </TouchableOpacity>
             </View>
             <View className="flex justify-center items-center">
                 <Image source={item.image} className="h-48 w-52" />
